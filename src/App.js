@@ -4,21 +4,21 @@ import SingleCard from "./components/SingleCard";
 import "./App.css";
 
 const cardImages = [
-  { key: 1, src: "/img/bike.png", matched: false },
-  { key: 2, src: "/img/chocolate.png", matched: false },
-  { key: 3, src: "/img/coffee.png", matched: false },
-  { key: 4, src: "/img/flowers.png", matched: false },
-  { key: 5, src: "/img/meditate.png", matched: false },
-  { key: 6, src: "/img/water.png", matched: false },
+  { key: 1, src: "./img/bike.png", matched: false },
+  { key: 2, src: "./img/chocolate.png", matched: false },
+  { key: 3, src: "./img/coffee.png", matched: false },
+  { key: 4, src: "./img/flowers.png", matched: false },
+  { key: 5, src: "./img/meditate.png", matched: false },
+  { key: 6, src: "./img/water.png", matched: false },
 ];
 
 const cardTranslation = [
-  { key: 1, src: "/img/bike_spanish.png", matched: false },
-  { key: 2, src: "/img/chocolate_spanish.png", matched: false },
-  { key: 3, src: "/img/coffee_spanish.png", matched: false },
-  { key: 4, src: "/img/flowers_spanish.png", matched: false },
-  { key: 5, src: "/img/meditate_spanish.png", matched: false },
-  { key: 6, src: "/img/water_spanish.png", matched: false },
+  { key: 1, src: "./img/bike_spanish.png", matched: false },
+  { key: 2, src: "./img/chocolate_spanish.png", matched: false },
+  { key: 3, src: "./img/coffee_spanish.png", matched: false },
+  { key: 4, src: "./img/flowers_spanish.png", matched: false },
+  { key: 5, src: "./img/meditate_spanish.png", matched: false },
+  { key: 6, src: "./img/water_spanish.png", matched: false },
 ];
 
 function App() {
