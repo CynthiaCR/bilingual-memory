@@ -13,12 +13,12 @@ const cardImages = [
 ];
 
 const cardTranslation = [
-  { key: 1, src: "./img/bike_spanish.png", matched: false },
-  { key: 2, src: "./img/chocolate_spanish.png", matched: false },
-  { key: 3, src: "./img/coffee_spanish.png", matched: false },
-  { key: 4, src: "./img/flowers_spanish.png", matched: false },
-  { key: 5, src: "./img/meditate_spanish.png", matched: false },
-  { key: 6, src: "./img/water_spanish.png", matched: false },
+  { key: 1, src: "./img/bikeSpanish.png", matched: false },
+  { key: 2, src: "./img/chocolateSpanish.png", matched: false },
+  { key: 3, src: "./img/coffeeSpanish.png", matched: false },
+  { key: 4, src: "./img/flowersSpanish.png", matched: false },
+  { key: 5, src: "./img/meditateSpanish.png", matched: false },
+  { key: 6, src: "./img/waterSpanish.png", matched: false },
 ];
 
 function App() {
