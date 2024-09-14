@@ -21,7 +21,7 @@ function SingleCard({ card, handleFlip, displayFront, disabled }) {
         />
         <img
           className="back"
-          src="/img/cover.png"
+          src="./img/cover.png"
           onClick={handleClick}
           alt="card back"
           width={200}
