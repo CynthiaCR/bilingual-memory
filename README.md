@@ -8,7 +8,6 @@
 - HTML
 - CSS
 - React
-- AWS (S3 bucket for deployment)
 
 ## Design
 
@@ -16,4 +15,4 @@ All cards were designed using [Canva](https://www.canva.com/).
 
 ## Deployment
 
-Since this is a static website, it is deployed using an S3 bucket from AWS.
+Since this is a static website, it is deployed using GitHub pages
