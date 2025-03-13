@@ -15,4 +15,4 @@ All cards were designed using [Canva](https://www.canva.com/).
 
 ## Deployment
 
-Since this is a static website, it is deployed using GitHub pages
+It is deployed using GitHub pages
