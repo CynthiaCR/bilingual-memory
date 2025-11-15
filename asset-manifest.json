@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/bilingual-memory/static/css/main.c283ce02.css",
-    "main.js": "/bilingual-memory/static/js/main.b6672a43.js",
+    "main.css": "/bilingual-memory/static/css/main.02ee0209.css",
+    "main.js": "/bilingual-memory/static/js/main.29cc4715.js",
     "index.html": "/bilingual-memory/index.html",
-    "main.c283ce02.css.map": "/bilingual-memory/static/css/main.c283ce02.css.map",
-    "main.b6672a43.js.map": "/bilingual-memory/static/js/main.b6672a43.js.map"
+    "main.02ee0209.css.map": "/bilingual-memory/static/css/main.02ee0209.css.map",
+    "main.29cc4715.js.map": "/bilingual-memory/static/js/main.29cc4715.js.map"
   },
   "entrypoints": [
-    "static/css/main.c283ce02.css",
-    "static/js/main.b6672a43.js"
+    "static/css/main.02ee0209.css",
+    "static/js/main.29cc4715.js"
   ]
 }
