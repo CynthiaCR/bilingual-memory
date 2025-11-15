@@ -24,9 +24,14 @@ const cardTranslation = [
 function App() {
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
+  const [score, setScore] = useState(0);
   const [flippedCard1, setFlippedCard1] = useState(null);
   const [flippedCard2, setflippedCard2] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [showScoreIncrease, setShowScoreIncrease] = useState(false);
+  const [pointsGained, setPointsGained] = useState(0);
+  const [scoreAnimating, setScoreAnimating] = useState(false);
+  const [gameComplete, setGameComplete] = useState(false);
 
   // shuffle the card array
   const shuffle = () => {
@@ -40,6 +45,8 @@ function App() {
     // set the shuffled cards
     setCards(shuffleCards);
     setTurns(0);
+    setScore(0);
+    setGameComplete(false);
   };
 
   // check if the flipped cards match
@@ -57,6 +64,20 @@ function App() {
             }
           });
         });
+        
+        // Increment score and show feedback
+        const pointsToAdd = 10;
+        setScore((prevScore) => prevScore + pointsToAdd);
+        setPointsGained(pointsToAdd);
+        setShowScoreIncrease(true);
+        setScoreAnimating(true);
+        
+        // Hide the score increase notification after animation
+        setTimeout(() => {
+          setShowScoreIncrease(false);
+          setScoreAnimating(false);
+        }, 2000);
+        
         resetFlippedCards();
       } else {
         setTimeout(() => resetFlippedCards(), 1000);
@@ -78,6 +99,13 @@ function App() {
     setDisabled(false);
   };
 
+  // check if all cards are matched
+  useEffect(() => {
+    if (cards.length > 0 && cards.every(card => card.matched)) {
+      setGameComplete(true);
+    }
+  }, [cards]);
+
   // start the game - show the cards
   useEffect(() => {
     shuffle();
@@ -86,8 +114,34 @@ function App() {
   return (
     <div className="App">
       <h3>Strengthen your memory, expand your vocabulary!</h3>
-      <button onClick={shuffle}> New Game</button>
+      <div className="game-header">
+        <button onClick={shuffle} className={gameComplete ? 'new-game-prominent' : ''}>
+          New Game
+        </button>
+        <div className="score-container">
+          <p className="score">Score: <span className={`score-value ${scoreAnimating ? 'animate' : ''}`}>{score}</span></p>
+          {showScoreIncrease && (
+            <div className="score-increase">
+              +{pointsGained} points!
+            </div>
+          )}
+        </div>
+      </div>
       {/* <p>Turns: {turns}</p> */}
+      {gameComplete && (
+        <div className="congratulations-overlay">
+          <div className="congratulations-modal">
+            <h2 className="congratulations-title">🎉 Congratulations! 🎉</h2>
+            <p className="congratulations-message">
+              You've matched all the pairs!
+            </p>
+            <p className="final-score">Final Score: <span className="final-score-value">{score}</span></p>
+            <button onClick={shuffle} className="congratulations-button">
+              Play Again
+            </button>
+          </div>
+        </div>
+      )}
       <div className="card-grid">
         {cards.map((card) => (
           <SingleCard
